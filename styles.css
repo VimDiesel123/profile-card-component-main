@@ -91,3 +91,9 @@ h6 {
   --fw-regular: 400;
   --fw-bold: 700;
 }
+
+body {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-700);
+}
