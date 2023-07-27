@@ -78,3 +78,16 @@ h6 {
 }
 
 /* My CSS */
+
+:root {
+  --clr-primary-500: hsl(185, 75%, 39%);
+  --clr-primary-700: hsl(185, 75%, 39%);
+  --clr-primary-800: hsl(227, 10%, 46%);
+
+  --clr-neutral-700: hsl(0, 0%, 59%);
+
+  --fs-body: 18px;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
