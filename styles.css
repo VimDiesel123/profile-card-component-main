@@ -97,3 +97,27 @@ body {
   font-weight: var(--fw-regular);
   color: var(--clr-neutral-700);
 }
+
+main {
+  min-height: 100vh;
+  display: grid;
+  background-color: var(--clr-primary-700);
+}
+
+.profile {
+  place-self: center center;
+}
+
+.bg-img {
+  position: absolute;
+}
+
+.bg-img--top {
+  top: -10vh;
+  left: -50vw;
+}
+
+.bg-img--bottom {
+  bottom: -10vh;
+  right: -50vw;
+}
