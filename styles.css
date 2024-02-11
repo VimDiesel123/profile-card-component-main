@@ -44,6 +44,7 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
+  max-height: 100%;
 }
 
 /*
@@ -81,31 +82,85 @@ h6 {
 
 :root {
   --clr-primary-500: hsl(185, 75%, 39%);
-  --clr-primary-700: hsl(185, 75%, 39%);
-  --clr-primary-800: hsl(227, 10%, 46%);
+  --clr-primary-800: hsl(229, 23%, 23%);
+  --clr-primary-700: hsl(227, 10%, 46%);
 
   --clr-neutral-700: hsl(0, 0%, 59%);
 
-  --fs-body: 18px;
+  --fs-body: 15px;
+  --fs-bold: 18px;
 
   --fw-regular: 400;
   --fw-bold: 700;
+
+  --ff-body: "Kumbh Sans", sans-serif;
 }
 
 body {
   font-size: var(--fs-body);
   font-weight: var(--fw-regular);
   color: var(--clr-neutral-700);
+  font-family: var(--ff-body);
 }
 
 main {
-  min-height: 100vh;
+  min-height: 100svh;
   display: grid;
-  background-color: var(--clr-primary-700);
+  background-color: var(--clr-primary-500);
+  background-image: url(./images/bg-pattern-bottom.svg),
+    url(./images/bg-pattern-top.svg);
+  background-position: 50vw 50vh, 0 -50vh;
+  background-repeat: no-repeat;
 }
 
 .profile {
   place-self: center center;
+  background-color: white;
+  border-radius: 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+.profile__header {
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: 5rem;
+}
+
+.profile__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid hsl(0, 0%, 89%);
+}
+
+.profile__name {
+  display: inline;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.profile__name span {
+  font-size: var(--fs-bold);
+}
+
+.avatar {
+  border: 5px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 23%;
+}
+
+.social-stats {
+  display: flex;
+  justify-content: space-around;
+  padding-block: 2rem;
+}
+
+.social-stats__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bg-img {
@@ -120,4 +175,18 @@ main {
 .bg-img--bottom {
   bottom: -10vh;
   right: -50vw;
+}
+
+/* Utility */
+
+.text--bold {
+  font-size: var(--fs-bold);
+  color: var(--clr-primary-800);
+  font-weight: var(--fw-bold);
+}
+
+@media screen and (max-width: 800) {
+  main {
+    background-position: 50vw 50vh, -100vw -50vh;
+  }
 }
